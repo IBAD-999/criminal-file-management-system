@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criminal File Management System</title>
+    <link rel="stylesheet" href="criminalfile2.css">
+</head>
+<body>
+    <header>
+        <h1>Criminal File Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('add-criminal')">Add Criminal</a></li>
+                <li><a href="#" onclick="showSection('view-criminals')">View Criminals</a></li>
+                <li><a href="#" onclick="showSection('add-case')">Add Case File</a></li>
+                <li><a href="#" onclick="showSection('view-cases')">View Case Files</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <div class="Criminalpicture">
+            <img src="project.jpg" width="1586px" height="600px" >
+            <div class="criminalpictext">
+            <h4>Welcome to the Criminal File Management System</h4>
+            <p>Use the navigation menu to manage criminal records and case files.</p>
+            </div>
+        </div>
+
+        </section>
+        
+    
+
+        <section id="add-criminal" style="display: none;">
+            <h2>Add Criminal</h2>
+            <form id="criminalForm">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+                
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+                
+                <label for="photo">Photo URL:</label>
+                <input type="text" id="photo" name="photo">
+                
+                <button type="submit">Add Criminal</button>
+            </form>
+        </section>
+
+        <section id="view-criminals" style="display: none;">
+            <h2>View Criminals</h2>
+            <div id="criminalsList"></div>
+        </section>
+
+        <section id="add-case" style="display: none;">
+            <h2>Add Case File</h2>
+            <form id="caseForm">
+                <label for="criminalId">Criminal ID:</label>
+                <input type="number" id="criminalId" name="criminalId" required>
+                
+                <label for="crimeId">Crime ID:</label>
+                <input type="number" id="crimeId" name="crimeId" required>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="details">Details:</label>
+                <input type="text" id="details" name="details" required>
+                
+                <button type="submit">Add Case File</button>
+            </form>
+        </section>
+
+        <section id="view-cases" style="display: none;">
+            <h2>View Case Files</h2>
+            <div id="casesList"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
